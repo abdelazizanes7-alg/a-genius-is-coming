@@ -40,6 +40,8 @@ if method==2:
              print("bad luck, the computer choose head")  
     else:
         print("please choose between head and tail")
+ else:
+        print("choose onmy between 1 or 2")
         
      
         
