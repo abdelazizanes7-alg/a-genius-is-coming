@@ -1,0 +1,56 @@
+print("welcome to the coin guessing game!")
+method=int(input("""
+please choose one method to play(1 or 2)
+1_using random.randint()
+2_using random.random():\n"""))
+import random
+choose=random.randint(0,1)
+choose1=random.random()
+int_choose=int(choose)
+int_choose1=float(choose1)
+result="tail"
+result1="head"
+if method==1:
+     guess=input("please choose between head and tail:\n").lower()
+     if guess=="tail"or guess=="head":
+        if int_choose==0:
+          if result==guess:
+            print("cong , it is a correct hint , it is tail")
+          else:
+           print("bad luck, the computer choose (tail) ")
+        if int_choose==1:
+          if result1==guess:
+             print("cong , it is a correct hint, it is head")
+          else:
+             print("bad luck, the computer choose (head)")
+     else:
+               print("please choose between head and tail") 
+if method==2:
+    guess=input("please choose betwenn head and tail:\n").lower()
+    if guess=="tail"or guess=="head":
+      if int_choose1>=0.5:
+          if result==guess:
+              print("cong, it is a correct hint, it is tail")
+          else:
+              print("bad luck, the computer choose tail")
+      else:
+         if result1==guess:
+             print("cong, it is a correct hint, it is head")
+         else:
+             print("bad luck, the computer choose head")  
+    else:
+        print("please choose between head and tail")
+        
+     
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
