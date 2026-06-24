@@ -13,21 +13,21 @@ if number[0]=="1":
     print(a)
     print(b)
     print(c)
-    if int(number[1])>3:
+    if int(number[1])>3 or int(number[1])<=0:
         print("please choose a valiable place!")
 elif number[0]=="2":
     b[int(number[1])-1]="🐇"
     print(a)
     print(b)
     print(c)
-    if int(number[1])>3:
+    if int(number[1])>3 or int(number[1])<=0:
         print("please choose a valiable place!")
 elif number[0]=="3":
     c[int(number[1])-1]="🐇"
     print(a)
     print(b)
     print(c)
-    if int(number[1])>3:
+    if int(number[1])>3 or int(number[1])<=0:
         print("please choose a valiable place!")
 else:
     print("please choose a viliable place")
