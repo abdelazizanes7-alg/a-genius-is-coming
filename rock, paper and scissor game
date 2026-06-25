@@ -1,0 +1,86 @@
+print("welcome to the rock, paper, scissors")
+start=input("please enter to continue or type(help) for the rules").lower()
+if start:
+    if start=="help":
+        print(""" this is the rules of the game:
+        1)_you choose and the computer chooses
+        2)_rock smaches scissors:rock wins
+        3)_scissors cut paper:scissors win
+        4)_paper cpvers rock:paper wins""")
+    else:
+        print("you must write help!")
+else:
+    rock=("""
+        _______
+    ---'   ____)
+          (_____)
+          (_____)
+           (____)
+    ---.__(___)""")
+    paper=(""""
+         _______
+    ---'    ____)____
+               ______)
+               _______)
+              _______)
+    ---.__________))""")
+    scissor=("""
+        _______
+    ---'   ____)____
+              ______)
+           __________)
+           (____)
+    ---.__(___)""")
+    print("nice let's start the game")
+user_choice=input("choose between rock,paper,scissor:\n").lower()
+total_list=["rock","paper","scissor"]
+import random
+auto_choice=random.choice(total_list)
+if user_choice=="paper":
+    print(f"""you choose
+    {paper}""")
+    if auto_choice=="paper":
+        print(f"""the computre choice is:
+        {paper}
+        it's a draw""")
+    elif auto_choice=="rock":
+        print(f"""the computer choice is:
+        {rock}
+        you win, paper beats rock""")
+    else:
+        print(f"""the computer choice is:
+        {scissor}
+              
+        you loose, scissors beat paper""")
+
+elif user_choice=="rock":
+    print(f"""you choose:
+    {rock}""")
+    if auto_choice=="rock":
+        print(f""""the computer choice is:
+        {rock})
+        it's a draw""")
+    elif auto_choice=="paper":
+        print(f"""the computer choice is:
+        {paper})
+        you loose, paper beats rock""")
+    else:
+        print(f""""the computer choice is :
+        {scissor}
+        you win, rock beats scissors""")
+elif user_choice=="scissors":
+    if auto_choice=="scissor":
+        print(f"""the computer choice is:
+        {scissor}
+        it's a draw""")
+    elif auto_choice=="rock":
+        print(f"""the computer choice is:
+        {rock}
+        you loose, rock beats scissors)""")
+    else:
+        print(f"""the computer choice is:
+        {paper} 
+        you win,scissor beats paper""")
+else:
+    print("please choose rock or paper or scissor")
+        
