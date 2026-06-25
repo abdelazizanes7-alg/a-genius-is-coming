@@ -6,7 +6,7 @@ if start:
         1)_you choose and the computer chooses
         2)_rock smaches scissors:rock wins
         3)_scissors cut paper:scissors win
-        4)_paper cpvers rock:paper wins""")
+        4)_paper cpvers rock:paper wins \n now restart the game""")
     else:
         print("you must write help!")
 else:
