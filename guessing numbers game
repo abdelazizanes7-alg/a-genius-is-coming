@@ -1,0 +1,9 @@
+number=int(input("please guess a number betwee 0 and 1000:\n"))
+import random
+total_rand=random.randint(0,1000)
+while number!=total_rand:
+    if number<total_rand:
+        number=int(input("too low! guess again:\n"))
+    else:
+        number=int(input("too high! guess again:\n"))
+print(f"good guess, it's {total_rand}")
