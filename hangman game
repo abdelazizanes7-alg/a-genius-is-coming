@@ -1,0 +1,67 @@
+import random
+words =["country","bad","school","book","relation","world","phone","foot","click","safety"]
+ran_word=random.choice(words)
+space=["_"]*len(ran_word)
+print( " ".join(space))
+tries=6
+shapes=[""" +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========""",""""  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========""",""" +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========""","""  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========""",""" +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========""","""  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========""","""  +---+
+  |   |
+      |
+      |
+      |
+      |
+========="""]
+    
+        
+while "_"in space and tries>0:
+    guessed=input("please guess a letter:\n").lower()
+    if guessed not in ran_word:
+        tries-=1
+    for x in range(len(ran_word)):
+        if ran_word[x]==guessed:
+            space[x]=guessed
+    
+    print(f" you have {tries} tries")
+    print(shapes[tries])
+    print(" ".join(space))
+if "_" not in space:
+    print(f"congratulation, the word is {ran_word}")
+if tries==0:
+    print(shapes[0])
+    print(f"you loose, the word is {ran_word}")
