@@ -1,0 +1,53 @@
+import string
+
+letters = string.ascii_lowercase
+
+print("================================")
+print("     Welcome to Caesar Cipher")
+print("================================")
+print("1. Encrypt a message")
+print("2. Decrypt a message")
+
+choice = input("Choose (1 or 2): ")
+
+message = input("Please enter a sentence:\n")
+number = int(input("Please enter a shifted number:\n"))
+
+def encrypt(sentence, step):
+    total = ""
+    for x in sentence:
+        if x.lower() in letters:
+            or_pos = letters.index(x.lower())
+            new_pos = (or_pos + step) % 26
+            new_letter = letters[new_pos]
+
+            if x.isupper():
+                total += new_letter.upper()
+            else:
+                total += new_letter
+        else:
+            total += x
+    print(total)
+
+def decrypt(sentence, step):
+    total = ""
+    for x in sentence:
+        if x.lower() in letters:
+            or_pos = letters.index(x.lower())
+            new_pos = (or_pos - step) % 26
+            new_letter = letters[new_pos]
+
+            if x.isupper():
+                total += new_letter.upper()
+            else:
+                total += new_letter
+        else:
+            total += x
+    print(total)
+
+if choice == "1":
+    encrypt(message, number)
+elif choice == "2":
+    decrypt(message, number)
+else:
+    print("Invalid choice!")
